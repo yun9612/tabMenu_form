@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import url("reset.css");
+.inner {
+  width: 100%;
+  max-width: 960px;
+  background-color: rgb(163, 208, 248);
+  margin: auto;
+}
+.header {
+  height: 70px;
+  background-color: aliceblue;
+}
+.header .inner {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.header .inner h1 {
+  width: 20%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+.tabNav {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+.tabNav > li {
+  width: calc(100% / 5);
+}
+.tabNav > li > a {
+  position: relative;
+  width: 100%;
+  line-height: 70px;
+  display: block;
+  background-color: rgb(112, 184, 187);
+}
+.tabNav > li > a:hover,
+.tabNav > li > a.active {
+  background-color: rgb(73, 124, 126);
+  color: #fff;
+}
+/* popup btn */
+.popUpBtn .inner {
+  position: relative;
+  z-index: 999;
+}
+.popUpBtn .inner a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 88px;
+  background-color: cornflowerblue;
+  padding: 10px 10px;
+}
+.popUpBtn .inner a::after {
+  content: "🔼 close";
+}
+.popUpBtn .inner a.active::after {
+  content: "🔽 open";
+}
+
+/* 바뀌는 내용 영역 */
+.tabItem {
+  position: relative;
+  width: 100%;
+  display: none;
+}
+.tabItem img {
+  width: 100%;
+  display: block;
+}
+.tabItem .inner {
+  position: relative;
+}
+.content {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  width: 30%;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+.content > p {
+  font-size: 12px;
+  margin: 10px 0;
+  color: #fff;
+}
+.readMore {
+  color: #fff;
+  font-size: 13px;
+  padding: 5px 10px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: inline-block;
+}
