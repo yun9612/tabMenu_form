@@ -34,4 +34,13 @@ window.addEventListener("load", function () {
       tabItems[index].style.display = "block";
     });
   });
+
+  // gotop 버튼
+  const gotopBtn = this.document.querySelector("#goTop");
+  gotopBtn.addEventListener("click", () => {
+    this.window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 }); //END
